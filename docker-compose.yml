@@ -5,7 +5,7 @@ services:
         command: --api --providers.docker # 启用 Web 管理界面和对 Docker 的支持
         ports:
             - "80:80"     # 对外的网关端口号
-            - "8001:8080" # Web 管理界面端口号
+            - "8000:8080" # Web 管理界面端口号
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         restart: unless-stopped
