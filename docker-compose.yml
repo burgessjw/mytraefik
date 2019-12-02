@@ -2,7 +2,7 @@ version: '2'
 services:
     reverse-proxy:
         image: traefik:v2.0-alpine
-        command: --api --providers.docker # 启用 Web 管理界面和对 Docker 的支持
+        command: --global.sendAnonymousUsage --api --providers.docker # 启用 Web 管理界面和对 Docker 的支持
         ports:
             - "80:80"     # 对外的网关端口号
             - "8000:8080" # Web 管理界面端口号
